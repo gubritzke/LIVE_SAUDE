@@ -25,7 +25,7 @@ export default function Faq() {
                                 <div className="row">
                                     <div className="col-12">
                                         <p className="font-25 cl-purple title">
-                                            Consulte a rede <b>Live Saúde</b>
+                                            Consulte por nossos telefones <b>XXXX - XXXX</b>
                                         </p>
                                     </div>
                                 </div>
