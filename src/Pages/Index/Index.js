@@ -4,6 +4,8 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 import './Index.scss'
 
+import Scrollchor from 'react-scrollchor';
+
 import MaisInfos from '../../Components/MaisInfos'
 import Planos from '../../Components/Planos'
 
@@ -40,7 +42,7 @@ export default function Index() {
                                 <li className="cl-green">e ainda mais benefícios!</li>
                             </ul>
                             <div className="bg-purple ver-planos">
-                                <p className="font-20 cl-white">A partir de <span className="font-39 f-wheight-600">R$23,90</span>/mês <Link className="cl-black bg-green" href="javascript:;">ver planos</Link></p>
+                                <p className="font-20 cl-white">A partir de <span className="font-39 f-wheight-600">R$23,90</span>/mês <Scrollchor className="cl-black bg-green" to="#planoa">ver planos</Scrollchor></p>
                             </div>
                         </div>
                     </div>
@@ -69,7 +71,7 @@ export default function Index() {
                                 e <b>Orientação Médica por telefone,</b> <br />
                                 quando quiser!
                             </p>
-                            <Link className="font-16 cl-purple border-purple bt">quero mais informações</Link>
+                            <Link to="beneficios" className="font-16 cl-purple border-purple bt">quero mais informações</Link>
                         </ScrollAnimation>
                         </div>
                     </div>
@@ -116,7 +118,7 @@ export default function Index() {
                                 <img src={IconRemedios} />
                                 <span className="cl-white font-25 title">Remédios</span>
                                 <p className="cl-white font-16">Preços reduzidos em farmácias das redes parceiras, com desconto de até 60%.</p>
-                                <Link className="link cl-white" to="javascript:;">Consulte nossa rede</Link>
+                                <Link className="link cl-white" to="consulta">Consulte nossa rede</Link>
                             </div>
                             </ScrollAnimation>
                         </div>
@@ -127,7 +129,7 @@ export default function Index() {
                                 <img src={IconSaude} />
                                 <span className="cl-white font-25 title">Saúde 360°</span>
                                 <p className="cl-white font-16">Dentistas, nutricionistas e outros profissionais, além de assistência funeral e serviço de emergências veiculares.</p>
-                                <Link className="link cl-white" to="javascript:;">Saiba mais</Link>
+                                <Link className="link cl-white" to="consulta">Saiba mais</Link>
                             </div>
                             </ScrollAnimation>
                         </div>
@@ -138,7 +140,7 @@ export default function Index() {
                             <div className="cl-purple bg-white fale-consultor">
                                 <p className="font-22">
                                     Dê esse passo para uma vida melhor por menos de R$0,80 por dia!
-                                <Link className="border-purple cl-purple bt font-16 f-wheight-700">fale com um consultor</Link>
+                                <Link to="contato" className="border-purple cl-purple bt font-16 f-wheight-700">fale com um consultor</Link>
                                 </p>
                             </div>
                         </div>
@@ -146,6 +148,7 @@ export default function Index() {
                 </div>
             </div>
 
+            <div id="planoa"></div>
             <Planos />
 
             <div id="banner-full"></div>
@@ -166,7 +169,7 @@ export default function Index() {
                                 a dizer e junte-se a nós em busca 
                                 de mais qualidade de vida.
                             </span>
-                            <Link className="bg-purple bt cl-white f-wheight-700">
+                            <Link className="bg-purple bt cl-white f-wheight-700" to="checkout">
                                 Assinar Live Saúde
                             </Link>
                         </div>

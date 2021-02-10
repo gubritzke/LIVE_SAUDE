@@ -21,28 +21,28 @@ export default function Footer(){
                                         <Link to="javascript:;">Conheça os planos</Link>
                                     </li>
                                     <li>
-                                        <Link to="javascript:;">Benefícios</Link>
+                                        <Link to="beneficios">Benefícios</Link>
                                     </li>
                                     <li>
-                                        <Link to="javascript:;">Sobre a Live Saúde</Link>
+                                        <Link to="faq">Sobre a Live Saúde</Link>
                                     </li>
                                 </ul>
 
                                 <ul className="cl-white font-16 ">
                                     <li>
-                                        <Link to="javascript:;">Dúvidas frequentes</Link>
+                                        <Link to="faq">Dúvidas frequentes</Link>
                                     </li>
                                     <li>
-                                        <Link to="javascript:;">Consulte nossa Rede</Link>
+                                        <Link to="consulta">Consulte nossa Rede</Link>
                                     </li>
                                     <li>
-                                        <Link to="javascript:;">Contato</Link>
+                                        <Link to="contato">Contato</Link>
                                     </li>
                                 </ul>
 
                                 <ul className="cl-white font-16 redes ">
                                     <li>
-                                        <Link to="javascript:;">Siga a Live Saúde</Link>
+                                        <a>Siga a Live Saúde</a>
                                     </li>
                                     <li>
                                         <Link to="javascript:;"><img src={IconFace}/> <img src={IconInstagram}/></Link>
@@ -66,7 +66,7 @@ export default function Footer(){
                             <p className="font-14 cl-white">2020 ® Live Saúde</p>
                         </div>
                         <div className="col-md-12 col-lg-6" align="right">
-                            <p className="prod font-14 cl-white">Produzido por <Link to="javascript:;" className="f-wheight-600 cl-white"> Tropa Digital</Link> e <Link className="f-wheight-600 cl-white" to="">SOMO Collab</Link> </p>
+                            <p className="prod font-14 cl-white">Produzido por <a href="https://tropa.digital" className="f-wheight-600 cl-white"> Tropa Digital</a> e <a className="f-wheight-600 cl-white" href="https://somocollab.com">SOMO Collab</a> </p>
                         </div>
                     </div>
                 </div>

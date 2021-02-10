@@ -36,7 +36,7 @@ export default function Planos(){
                         <div className="footer">
                             <p className="font-14 cl-green f-wheight-700">Economia e tranquilidade por apenas</p>
                             <span className="cl-green font-35 f-wheight-700 valor">R$ 23,90<span className="font-28 f-wheight-500">/mês</span></span>
-                            <Link to="javascript:;" className="bt bg-green f-wheight-600 cl-white font-18">Solicitar Cartão</Link>
+                            <Link to="checkout" className="bt bg-green f-wheight-600 cl-white font-18">Solicitar Cartão</Link>
                         </div>
                     </div>
                     </ScrollAnimation>
@@ -60,7 +60,7 @@ export default function Planos(){
                         <div className="footer">
                             <p className="font-14 cl-green f-wheight-700">Economia e tranquilidade por apenas</p>
                             <span className="cl-green font-35 f-wheight-700 valor">R$ 29,90<span className="font-28 f-wheight-500">/mês</span></span>
-                            <Link to="javascript:;" className="bt bg-purple f-wheight-600 cl-white font-18">Solicitar Cartão</Link>
+                            <Link to="checkout" className="bt bg-purple f-wheight-600 cl-white font-18">Solicitar Cartão</Link>
                         </div>
                     </div>
                     </ScrollAnimation>
@@ -86,7 +86,7 @@ export default function Planos(){
                         <div className="footer">
                             <p className="font-14 cl-green f-wheight-700">Economia e tranquilidade por apenas</p>
                             <span className="cl-green font-35 f-wheight-700 valor">R$ 34,90<span className="font-28 f-wheight-500">/mês</span></span>
-                            <Link to="javascript:;" className="bt bg-purple-2 f-wheight-600 cl-white font-18">Solicitar Cartão</Link>
+                            <Link to="checkout" className="bt bg-purple-2 f-wheight-600 cl-white font-18">Solicitar Cartão</Link>
                         </div>
                     </div>
                     </ScrollAnimation>

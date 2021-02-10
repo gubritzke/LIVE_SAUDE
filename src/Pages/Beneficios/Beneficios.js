@@ -7,6 +7,8 @@ import { useState } from 'react';
 import { api } from '../../Api/app'
 import './Beneficios.scss'
 
+import Scrollchor from 'react-scrollchor';
+
 import MaisInfos from '../../Components/MaisInfos'
 import Planos from '../../Components/Planos'
 
@@ -54,7 +56,7 @@ export default function Beneficios() {
                                 a vida com quem importa.<br />
                             </p>
                             <div className="bg-purple ver-planos">
-                                <p className="font-20 cl-white">A partir de <span className="font-39 f-wheight-600">R$23,90</span>/mês <Link className="cl-black bg-green" href="javascript:;">ver planos</Link></p>
+                                <p className="font-20 cl-white">A partir de <span className="font-39 f-wheight-600">R$23,90</span>/mês <Scrollchor className="cl-black bg-green" to="#planoa">ver planos</Scrollchor></p>
                             </div>
                         </div>
                     </div>
@@ -248,13 +250,14 @@ export default function Beneficios() {
                     <div className="row" align="center">
                         <div className="col-12">
                             <p className="font-25 cl-white">
-                                Temos um <b>Cartão Live Saúde</b> perfeito para você e sua família. <Link to="" className="cl-white font-25"><b>Tire suas dúvidas conosco.</b></Link>
+                                Temos um <b>Cartão Live Saúde</b> perfeito para você e sua família. <Link to="faq" className="cl-white font-25"><b>Tire suas dúvidas conosco.</b></Link>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div id="planoa"></div>
             <Planos />
             <MaisInfos />
         </div>

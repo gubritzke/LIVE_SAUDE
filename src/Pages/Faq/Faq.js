@@ -105,7 +105,7 @@ export default function Faq() {
                     <div className="row">
                         <div className="col-12">
                             <p className="font-16 cl-purple" align="center">
-                                Não encontrou o que precisava? Tudo bem, estamos a dispósição pelos outros <Link className="cl-purple">Canais de contato.</Link>
+                                Não encontrou o que precisava? Tudo bem, estamos a dispósição pelos outros <Link to="contato" className="cl-purple">Canais de contato.</Link>
                             </p>
                         </div>
                     </div>
