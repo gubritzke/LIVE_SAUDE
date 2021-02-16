@@ -19,6 +19,7 @@ import BannerFull from '../../images/home/banner-full.png'
 import DepoImg1 from '../../images/home/dep_01.jpg'
 import DepoImg2 from '../../images/home/dep_02.jpg'
 import DepoDetail from '../../images/home/box-depo-detail.jpg'
+import { BrowserView, MobileView } from 'react-device-detect';
 
 
 export default function Index() {
@@ -64,6 +65,7 @@ export default function Index() {
                             </ScrollAnimation>
                         </div>
                         <div className="col-lg-6 col-md-12 text">
+                            <BrowserView>
                         <ScrollAnimation animateIn="fadeInRight" animateOnce >
                             <p className="font-28 cl-purple ">
                                 Com o cartão Live Saúde você pode ter <br />
@@ -73,6 +75,16 @@ export default function Index() {
                             </p>
                             <Link to="beneficios" className="font-16 cl-purple border-purple bt">quero mais informações</Link>
                         </ScrollAnimation>
+                        </BrowserView>
+                        <MobileView>
+                            <p className="font-28 cl-purple ">
+                                Com o cartão Live Saúde você pode ter <br />
+                                direito a um <b>Check-up Médico</b> anual <br />
+                                e <b>Orientação Médica por telefone,</b> <br />
+                                quando quiser!
+                            </p>
+                            <Link to="beneficios" className="font-16 cl-purple border-purple bt">quero mais informações</Link>
+                        </MobileView>
                         </div>
                     </div>
                 </div>
@@ -136,7 +148,7 @@ export default function Index() {
                     </div>
 
                     <div className="row no-gutters">
-                        <div class="col-12" align="center">
+                        <div className="col-12" align="center">
                             <div className="cl-purple bg-white fale-consultor">
                                 <p className="font-22">
                                     Dê esse passo para uma vida melhor por menos de R$0,80 por dia!

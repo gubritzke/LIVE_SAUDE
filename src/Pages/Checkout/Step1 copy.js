@@ -12,7 +12,7 @@ import Sidebar from './Partial/Sidebar'
 
 export default function Step1() {
     const history = useHistory()
-    
+
     const [stepLoad, setstepLoad] = useState(false)
 
     const [camposFormulario, setCamposFormularios] = useState({
@@ -26,6 +26,16 @@ export default function Step1() {
         passo: 'PASSO-1',
     })
 
+    const [camposPlanos, setCamposPlanos] = useState({
+        nome: '',
+        planoId: '',
+        cadastroId: '',
+        dataNascimento: '',
+        cpf: '',
+        telefone: '',
+        statusAssinatura: 'ATIVO',
+    })
+
     async function handleSend(event)
     {
 
@@ -33,9 +43,15 @@ export default function Step1() {
 
         var data = camposFormulario
 
+        var dataAss = camposPlanos
+
         setstepLoad(true)
 
              var response =  await api.post('/cadastros', data)
+
+             data['cadastroId'] = response.data.data.id
+
+             var responseplanos = await api.post('/assinaturas', dataAss)
 
              console.log(response.data)
 

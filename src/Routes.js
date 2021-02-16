@@ -28,7 +28,7 @@ export default function Routes(){
                     <Route path="/consulta" exact component={Consulta} />
                     <Route path="/checkout" exact component={Checkout} />
                     <Route path="/minha-conta" exact component={MinhaConta} />
-                    <Route path="/checkout/passo-2" exact component={Checkout2} />
+                    <Route path="/checkout/passo-2/:id" exact component={Checkout2} />
                     <Route path="/checkout/passo-3" exact component={Checkout3} />
                     <Route path="/checkout/passo-4" exact component={Checkout4} />
                     <Route path="/contato" exact component={Contato} />
