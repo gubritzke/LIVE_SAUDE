@@ -182,6 +182,25 @@ input, button, textarea{
             display: flex;
             justify-content: center;
             margin-bottom: 25px;
+            align-items: center;
+            p{
+                margin-bottom: 30px;
+                position: relative;
+                &::before{
+                    content: "";
+                    background: url('../images/home/arrow-planos.png');
+                    width: 88px;
+                    height: 27px;
+                    position: absolute;
+                    left: 35px;
+                    top: 45px;
+                }
+                span{
+                    font-weight: 300;
+                    font-style: italic;
+                    font-size: 35px;
+                }
+            }
         }
 
         .list {

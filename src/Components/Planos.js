@@ -2,12 +2,49 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ScrollAnimation from 'react-animate-on-scroll';
 
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { api } from '../Api/app'
+
 import BulletMais from '../images/home/bullet_mais.svg'
 import PlanoEssencial from '../images/home/Plano_essencial.svg'
 import PlanoPremium from '../images/home/Plano_Premium.svg'
 import PlanoSaude from '../images/home/Plano_saude+.svg'
 
 export default function Planos(){
+
+    const [planoSelecionado, setPlanoSelecionado] = useState('')
+    const [bullet, setBullet] = useState([])
+    const [planos, setPlanos] = useState([])
+    const [PlanoSave, setPlanoSave] = useState(false);
+
+    useEffect(() => {
+
+        getPlanos();
+
+    }, [])
+
+    async function getPlanos(){       
+        let list = await api.get('/planos');
+        setPlanos(list.data);
+    }
+
+    async function getPlanoSelecionado(planoSelecionado){       
+
+        let list = await api.get('/planos/' + planoSelecionado)
+        let bullets = await api.get('/planos/itens/' + planoSelecionado )
+
+        
+        if(!window.localStorage.getItem('plano')){
+            setPlanoSave('planoSelecionado')
+            window.localStorage.setItem('plano', planoSelecionado)
+        }
+        
+        setPlanoSelecionado(list.data[0])
+        setBullet(bullets.data)
+
+    }
+
     return(
         <div id="planos">
         <div className="content">
@@ -24,7 +61,7 @@ export default function Planos(){
                     <ScrollAnimation animateIn="fadeIn" delay={100} animateOnce >
                     <div className="box">
                         <div className="topo bg-green">
-                            <img src={PlanoEssencial} />
+                            <p className="font-32 cl-white f-wheight-700">Plano <span>Essencial</span></p>
                         </div>
                         <div className="list">
                             <span className="cl-gray"><img src={BulletMais} />Descontos de até 70% em consultas médicas (clínico e especialidades)</span>
@@ -43,10 +80,10 @@ export default function Planos(){
                 </div>
 
                 <div className="col-lg-4 col-md-12">
-                    <ScrollAnimation animateIn="fadeIn" delay={500} animateOnce >
+                    <ScrollAnimation animateIn="fadeIn" delay={100} animateOnce >
                     <div className="box">
                         <div className="topo bg-purple">
-                            <img src={PlanoSaude} />
+                        <p className="font-32 cl-white f-wheight-700">Plano <span>Saúde+</span></p>
                         </div>
                         <div className="list">
                             <span className="cl-gray"><img src={BulletMais} />Descontos de até 70% em consultas médicas (clínico e especialidades)</span>
@@ -70,7 +107,7 @@ export default function Planos(){
                 <ScrollAnimation animateIn="fadeIn" delay={800} animateOnce >
                     <div className="box last-box">
                         <div className="topo bg-purple-2">
-                            <img src={PlanoPremium} />
+                        <p className="font-32 cl-white f-wheight-700">Plano <span>Live Premium</span></p>
                         </div>
                         <div className="list">
                             <span className="cl-gray"><img src={BulletMais} />Descontos de até 70% em consultas médicas (clínico e especialidades)</span>

@@ -214,8 +214,6 @@ export default function Step1(props) {
                                         <span className="border-purple font-16 pass-1 st-pass active">1</span>
                                         <span className="dashed-bar"></span>
                                         <span className="border-purple font-16 pass-2 st-pass ">2</span>
-                                        <span className="dashed-bar"></span>
-                                        <span className="border-purple font-16 pass-3 st-pass ">3</span>
                                     </div>
                                 </div>
 
@@ -227,33 +225,33 @@ export default function Step1(props) {
                                 <form className="row" method="post" onSubmit={sendStep1}>
                                     <label className="col-lg-8 col-md-12">
                                         <span className="cl-purple font-16">Seu nome completo*</span>
-                                        <input className="border-purple" type="text" value={dadosPessoais.nome} onChange={(e) => changeInputMult(e)} name="nome" placeholder="" />
+                                        <input className="border-purple" required type="text" value={dadosPessoais.nome} onChange={(e) => changeInputMult(e)} name="nome" placeholder="" />
                                     </label>
 
                                     <label className="col-lg-4 col-md-12">
                                         <span className="cl-purple font-16">Data de nascimento*</span>
-                                        <InputMask mask="99/99/9999" className="border-purple" type="text" value={dadosPessoais.dataNascimento} onChange={(e) => changeInputMult(e)} name="dataNascimento" placeholder="" />
+                                        <InputMask mask="99/99/9999" required className="border-purple" type="text" value={dadosPessoais.dataNascimento} onChange={(e) => changeInputMult(e)} name="dataNascimento" placeholder="" />
 
                                     </label>
 
                                     <label className="col-lg-8 col-md-12">
                                         <span className="cl-purple font-16">E-mail*</span>
-                                        <input  className="border-purple" type="email" value={dadosPessoais.email} onChange={(e) => changeInputMult(e)} name="email" placeholder="" />
+                                        <input  className="border-purple" required type="email" value={dadosPessoais.email} onChange={(e) => changeInputMult(e)} name="email" placeholder="" />
                                     </label>
                                     
                                     <label className="col-lg-4 col-md-12">
                                         <span className="cl-purple font-16">Telefone para contato*</span>
-                                        <InputMask mask="(99) 99999-9999" className="border-purple" type="text" value={dadosPessoais.telefone} onChange={(e) => changeInputMult(e)} name="telefone" placeholder="" />
+                                        <InputMask mask="(99) 99999-9999" required className="border-purple" type="text" value={dadosPessoais.telefone} onChange={(e) => changeInputMult(e)} name="telefone" placeholder="" />
                                     </label>
 
                                     <label className="col-lg-8 col-md-12">
                                         <span className="cl-purple font-16">CPF*</span>
-                                        <InputMask mask="999.999.999-99" className="border-purple" type="text" value={dadosPessoais.cpf} onChange={(e) => changeInputMult(e)} name="cpf" placeholder="" />
+                                        <InputMask mask="999.999.999-99" required className="border-purple" type="text" value={dadosPessoais.cpf} onChange={(e) => changeInputMult(e)} name="cpf" placeholder="" />
                                     </label>
                                     
                                     <label className="col-lg-4 col-md-12">
                                         <span className="cl-purple font-16">RG*</span>
-                                        <InputMask mask="**.***.***-*" className="border-purple" type="text" value={dadosPessoais.rg} onChange={(e) => changeInputMult(e)} name="rg" placeholder="" />
+                                        <InputMask mask="**.***.***-*" required className="border-purple" type="text" value={dadosPessoais.rg} onChange={(e) => changeInputMult(e)} name="rg" placeholder="" />
 
                                     </label>
 
@@ -273,8 +271,6 @@ export default function Step1(props) {
                                         <span className="border-purple font-16 pass-1 st-pass ">1</span>
                                         <span className="dashed-bar"></span>
                                         <span className="border-purple font-16 pass-2 st-pass active">2</span>
-                                        <span className="dashed-bar"></span>
-                                        <span className="border-purple font-16 pass-3 st-pass ">3</span>
                                     </div>
                                 </div>
 
@@ -286,38 +282,39 @@ export default function Step1(props) {
                                 <form className="row" method="post" onSubmit={sendStep2}>
                                     <label className="col-lg-4 col-md-12">
                                         <span className="cl-purple font-16">CEP*</span>
-                                        <InputMask mask="99999-999" className="border-purple" type="text" value={dadosEndereco.cep} onChange={(e) => changeInputEndereco(e)} name="cep" placeholder="" />
+                                        <InputMask mask="99999-999" required className="border-purple" type="text" value={dadosEndereco.cep} onChange={(e) => changeInputEndereco(e)} name="cep" placeholder="" />
                                     </label>
 
                                     <label className="col-lg-8 col-md-12">
                                         <span className="cl-purple font-16">Rua*</span>
-                                        <input  className="border-purple" type="text" value={dadosEndereco.logradouro} onChange={(e) => changeInputEndereco(e)} name="logradouro" placeholder="" />
+                                        <input  className="border-purple" required type="text" value={dadosEndereco.logradouro} onChange={(e) => changeInputEndereco(e)} name="logradouro" placeholder="" />
                                     </label>
 
                                     <label className="col-lg-3 col-md-12">
                                         <span className="cl-purple font-16">Número*</span>
-                                        <input  className="border-purple" type="text" value={dadosEndereco.numero} onChange={(e) => changeInputEndereco(e)} name="numero" placeholder="" />
+                                        <input  className="border-purple" required type="text" value={dadosEndereco.numero} onChange={(e) => changeInputEndereco(e)} name="numero" placeholder="" />
                                     </label>
 
                                     <label className="col-lg-9 col-md-12">
-                                        <span className="cl-purple font-16">Complemento*</span>
+                                        <span className="cl-purple font-16">Complemento</span>
                                         <input  className="border-purple" type="text" value={dadosEndereco.complemento} onChange={(e) => changeInputEndereco(e)} name="complemento" placeholder="" />
                                     </label>
 
                                     <label className="col-lg-4 col-md-12">
                                         <span className="cl-purple font-16">Bairro*</span>
-                                        <input  className="border-purple" type="text" value={dadosEndereco.bairro} onChange={(e) => changeInputEndereco(e)} name="bairro" placeholder="" />
+                                        <input  className="border-purple" required type="text" value={dadosEndereco.bairro} onChange={(e) => changeInputEndereco(e)} name="bairro" placeholder="" />
                                     </label>
 
                                     <label className="col-lg-4 col-md-12">
                                         <span className="cl-purple font-16">Cidade*</span>
-                                        <input  className="border-purple" type="text" value={dadosEndereco.cidade} onChange={(e) => changeInputEndereco(e)} name="cidade" placeholder="" />
+                                        <input  className="border-purple" required type="text" value={dadosEndereco.cidade} onChange={(e) => changeInputEndereco(e)} name="cidade" placeholder="" />
                                     </label>
 
                                     <label className="col-lg-4 col-md-12">
                                         <span className="cl-purple font-16">Estado*</span>
                                         <Select
                                             className={'border-purple'}
+                                            required
                                             name={'estado'}
                                             value={dadosEndereco.estado}
                                             onChange={(e) => changeInputEndereco(e)}
@@ -356,11 +353,11 @@ export default function Step1(props) {
                                     <div className="row col-12 pass-camp">
                                         <label className="col-lg-6 col-md-12">
                                             <span className="cl-purple font-16">Sua senha*</span>
-                                            <input  className="border-purple" type="password" value={dadosLogin.senha} onChange={(e) => changeInputLogin(e)} name="senha" placeholder="" />
+                                            <input required className="border-purple" type="password" value={dadosLogin.senha} onChange={(e) => changeInputLogin(e)} name="senha" placeholder="" />
                                         </label>
                                         <label className="col-lg-6 col-md-12">
                                             <span className="cl-purple font-16">Confirme sua senha*</span>
-                                            <input  className="border-purple" type="password" value={dadosLogin.repetaSenha} onChange={(e) => changeInputLogin(e)} name="repetaSenha" placeholder="" />
+                                            <input required className="border-purple" type="password" value={dadosLogin.repetaSenha} onChange={(e) => changeInputLogin(e)} name="repetaSenha" placeholder="" />
                                         </label>
                                     </div>
 

@@ -66,7 +66,7 @@ export default function Footer(){
                             <p className="font-14 cl-white">2020 ® Live Saúde</p>
                         </div>
                         <div className="col-md-12 col-lg-6" align="right">
-                            <p className="prod font-14 cl-white">Produzido por <a href="https://tropa.digital" className="f-wheight-600 cl-white"> Tropa Digital</a> e <a className="f-wheight-600 cl-white" href="https://somocollab.com">SOMO Collab</a> </p>
+                            <p className="prod font-14 cl-white">Produzido por <a href="https://tropa.digital" className="f-wheight-600 cl-white"> Tropa Digital &nbsp;</a> e <a className="f-wheight-600 cl-white" href="https://somocollab.com">SOMO Collab</a> </p>
                         </div>
                     </div>
                 </div>
