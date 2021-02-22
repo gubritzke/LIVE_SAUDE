@@ -127,7 +127,6 @@ export default function Step3() {
                                     <div className="col-12" align="center">
                                         <Link to="/" className="bt cl-white bg-purple f-weight-700">Voltar para a página inicial</Link>
                                     </div>
-
                                 </div>
 
                             </div>
