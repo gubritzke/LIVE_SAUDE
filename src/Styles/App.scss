@@ -161,6 +161,39 @@ input, button, textarea{
     margin: 100px 0;
     padding: 0 140px;
 
+    .plans{
+        .box-plans:nth-child(1){
+            .topo{
+                background-color: #00beca;
+            }
+            .footer{
+                a{
+                    background-color: #00beca ;
+                }
+            }
+        }
+        .box-plans:nth-child(2){
+            .topo{
+                background-color: #660ec3;
+            }
+            .footer{
+                a{
+                    background-color: #660ec3;
+                }
+            }
+        }
+        .box-plans:nth-child(3){
+            .topo{
+                background-color: #530075;
+            }
+            .footer{
+                a{
+                    background-color: #530075;
+                }
+            }
+        }
+    }
+
     .obs-planos {
         position: absolute;
         right: 0;
@@ -173,7 +206,7 @@ input, button, textarea{
 
     .box {
         box-shadow: 0 0 16px 3px #e7e7e7;
-        border-radius: 10px;
+        border-radius: 10px; 
 
         .topo {
             border-top-right-radius: 10px;

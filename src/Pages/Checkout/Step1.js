@@ -62,7 +62,7 @@ export default function Step1(props) {
     }, [props]);
 
     async function getPlanos(){
-        const result = await api.get('planos');
+        const result = await api.get('/planos/get/site');
 
         setPlanos(result.data);
         setPlanoSelecionado(result.data[0]);
